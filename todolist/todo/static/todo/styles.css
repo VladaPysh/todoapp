@@ -1,4 +1,26 @@
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 1.5rem;
+}
+
+.container {
+  margin: auto;
+}
+
 h1 {
-  color: blue;
+  color: #2c1483;
+}
+
+li {
+  padding: 10px;
+  margin: 5px;
+  font-size: 1.5rem;
+}
+
+input {
+  padding: 5px;
+  margin-bottom: 25px;
 }
 /*# sourceMappingURL=styles.css.map */

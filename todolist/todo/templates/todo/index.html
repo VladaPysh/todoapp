@@ -1,15 +1,15 @@
-{% load static %}
+{% extends "todo/layout.html" %}
 
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Index</title>
-  <link href="{% static 'todo/styles.css' %}" rel="stylesheet">
-</head>
-<body>
-  <h1> Hello, {{ name }} </h1>
-</body>
-</html>
+{% block body %}
+  <div class="container">
+    <h1>Tasks</h1>
+    <ul>
+      {% for task in tasks %}
+        <li>{{ task }}</li>
+      {% empty %}
+        <li>No tasks</li>
+      {% endfor %}
+    </ul>
+    <a href="{% url 'todo:add' %}">Add new task</a>
+  </div>
+{% endblock %}
